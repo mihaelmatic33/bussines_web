@@ -2262,8 +2262,37 @@ select:focus-visible {
 }
 
 @media (max-width: 640px) {
+  .container {
+    width: min(100% - 20px, 1180px);
+  }
+
+  .site-header__inner {
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .brand-copy__main {
+    font-size: 0.94rem;
+  }
+
+  .brand-copy__sub {
+    letter-spacing: 0.12em;
+  }
+
   .button {
     width: 100%;
+    min-height: 46px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-panel {
+    padding: 14px 16px 18px;
+  }
+
+  .mobile-nav__link {
+    padding: 12px 0;
   }
 
   .catalogue-grid,
@@ -2278,25 +2307,118 @@ select:focus-visible {
   }
 
   .section-shell {
-    padding: 62px 0;
-  }
-
-  .site-header__inner {
-    min-height: 72px;
+    padding: 56px 0;
   }
 
   .hero {
-    padding-top: 52px;
+    padding-top: 30px;
+  }
+
+  .hero-grid {
+    gap: 18px;
+  }
+
+  .eyebrow {
+    margin-bottom: 12px;
+    font-size: 0.64rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.25rem, 11vw, 3.2rem);
+    line-height: 0.98;
+  }
+
+  .hero-copy {
+    margin-top: 16px;
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .hero-actions,
   .cta-section__actions {
     display: grid;
     width: 100%;
+    gap: 10px;
+  }
+
+  .hero-visual {
+    min-height: 280px;
   }
 
   .hero-image {
-    height: 420px;
+    width: 100%;
+    height: 320px;
+    border-radius: 22px;
+  }
+
+  .hero-badge {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    padding: 12px 14px;
+    border-radius: 16px;
+  }
+
+  .value-grid,
+  .steps-list,
+  .services-grid,
+  .cta-section__actions {
+    gap: 14px;
+  }
+
+  .value-card,
+  .model-item,
+  .service-card,
+  .document-card,
+  .contact-card,
+  .info-block,
+  .feature-card {
+    border-radius: 20px;
+    padding: 18px 16px;
+    box-shadow: 0 12px 24px rgba(17, 17, 17, 0.04);
+  }
+
+  .value-card h3 {
+    font-size: clamp(1.25rem, 6vw, 1.65rem);
+  }
+
+  .value-card p,
+  .reason-list li,
+  .service-card p,
+  .document-card p,
+  .contact-card p,
+  .info-block p {
+    font-size: 0.96rem;
+    line-height: 1.7;
+  }
+
+  .reason-list li {
+    padding-left: 24px;
+  }
+
+  .model-item {
+    padding: 16px 14px;
+  }
+
+  .model-item__meta {
+    grid-template-columns: 38px 1fr;
+    gap: 10px;
+  }
+
+  .model-item__num {
+    width: 36px;
+    height: 36px;
+    font-size: 0.68rem;
+  }
+
+  .cta-section__inner {
+    border-radius: 22px;
+    padding: 22px 18px;
+  }
+
+  .cta-section h3 {
+    font-size: clamp(1.85rem, 8vw, 2.5rem);
   }
 
   .site-footer__bottom {
@@ -2306,6 +2428,30 @@ select:focus-visible {
 
   .steps-list::before {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-copy__sub {
+    font-size: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 12vw, 2.8rem);
+  }
+
+  .hero-badge strong {
+    font-size: 1.05rem;
+  }
+
+  .value-card,
+  .model-item,
+  .service-card,
+  .document-card,
+  .contact-card,
+  .info-block,
+  .feature-card {
+    padding: 16px 14px;
   }
 }
 
