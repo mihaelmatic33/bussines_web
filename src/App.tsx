@@ -1,6 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { Link, Route, Routes, useLocation } from 'react-router-dom'
+import { Link, NavLink, Route, Routes, useLocation } from 'react-router-dom'
 import './App.css'
 
 const navigation = ['Početna', 'Leasing', 'Usluge', 'Prodaja i najam', 'O nama', 'Kontakt']
@@ -360,9 +360,7 @@ function HomePage() {
 
           <nav className="desktop-nav" aria-label="Glavna navigacija">
             {navigation.map((item) => (
-              <Link key={item} to={navigationRoutes[item]} className="desktop-nav__link">
-                {item}
-              </Link>
+              <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `desktop-nav__link ${isActive ? "desktop-nav__link--active" : ""}`} >{item}</NavLink>
             ))}
           </nav>
 
@@ -394,9 +392,7 @@ function HomePage() {
             >
               <nav className="mobile-nav" aria-label="Mobilna navigacija">
                 {navigation.map((item) => (
-                  <Link key={item} to={navigationRoutes[item]} className="mobile-nav__link" onClick={() => setIsMobileMenuOpen(false)}>
-                    {item}
-                  </Link>
+                  <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `mobile-nav__link ${isActive ? "mobile-nav__link--active" : ""}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</NavLink>
                 ))}
               </nav>
 
@@ -735,9 +731,7 @@ function LeasingPage() {
 
           <nav className="desktop-nav" aria-label="Glavna navigacija">
             {navigation.map((item) => (
-              <Link key={item} to={navigationRoutes[item]} className="desktop-nav__link">
-                {item}
-              </Link>
+              <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `desktop-nav__link ${isActive ? "desktop-nav__link--active" : ""}`} >{item}</NavLink>
             ))}
           </nav>
 
@@ -769,9 +763,7 @@ function LeasingPage() {
             >
               <nav className="mobile-nav" aria-label="Mobilna navigacija">
                 {navigation.map((item) => (
-                  <Link key={item} to={navigationRoutes[item]} className="mobile-nav__link" onClick={() => setIsMobileMenuOpen(false)}>
-                    {item}
-                  </Link>
+                  <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `mobile-nav__link ${isActive ? "mobile-nav__link--active" : ""}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</NavLink>
                 ))}
               </nav>
 
@@ -1052,9 +1044,7 @@ function ServicesPage() {
 
           <nav className="desktop-nav" aria-label="Glavna navigacija">
             {navigation.map((item) => (
-              <Link key={item} to={navigationRoutes[item]} className="desktop-nav__link">
-                {item}
-              </Link>
+              <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `desktop-nav__link ${isActive ? "desktop-nav__link--active" : ""}`} >{item}</NavLink>
             ))}
           </nav>
 
@@ -1086,9 +1076,7 @@ function ServicesPage() {
             >
               <nav className="mobile-nav" aria-label="Mobilna navigacija">
                 {navigation.map((item) => (
-                  <Link key={item} to={navigationRoutes[item]} className="mobile-nav__link" onClick={() => setIsMobileMenuOpen(false)}>
-                    {item}
-                  </Link>
+                  <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `mobile-nav__link ${isActive ? "mobile-nav__link--active" : ""}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</NavLink>
                 ))}
               </nav>
 
@@ -1280,9 +1268,7 @@ function SalesRentalPage() {
 
           <nav className="desktop-nav" aria-label="Glavna navigacija">
             {navigation.map((item) => (
-              <Link key={item} to={navigationRoutes[item]} className="desktop-nav__link">
-                {item}
-              </Link>
+              <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `desktop-nav__link ${isActive ? "desktop-nav__link--active" : ""}`} >{item}</NavLink>
             ))}
           </nav>
 
@@ -1314,9 +1300,7 @@ function SalesRentalPage() {
             >
               <nav className="mobile-nav" aria-label="Mobilna navigacija">
                 {navigation.map((item) => (
-                  <Link key={item} to={navigationRoutes[item]} className="mobile-nav__link" onClick={() => setIsMobileMenuOpen(false)}>
-                    {item}
-                  </Link>
+                  <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `mobile-nav__link ${isActive ? "mobile-nav__link--active" : ""}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</NavLink>
                 ))}
               </nav>
 
@@ -1539,9 +1523,7 @@ function AboutPage() {
 
           <nav className="desktop-nav" aria-label="Glavna navigacija">
             {navigation.map((item) => (
-              <Link key={item} to={navigationRoutes[item]} className="desktop-nav__link">
-                {item}
-              </Link>
+              <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `desktop-nav__link ${isActive ? "desktop-nav__link--active" : ""}`} >{item}</NavLink>
             ))}
           </nav>
 
@@ -1573,9 +1555,7 @@ function AboutPage() {
             >
               <nav className="mobile-nav" aria-label="Mobilna navigacija">
                 {navigation.map((item) => (
-                  <Link key={item} to={navigationRoutes[item]} className="mobile-nav__link" onClick={() => setIsMobileMenuOpen(false)}>
-                    {item}
-                  </Link>
+                  <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `mobile-nav__link ${isActive ? "mobile-nav__link--active" : ""}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</NavLink>
                 ))}
               </nav>
 
@@ -1885,9 +1865,7 @@ function ContactPage() {
 
           <nav className="desktop-nav" aria-label="Glavna navigacija">
             {navigation.map((item) => (
-              <Link key={item} to={navigationRoutes[item]} className="desktop-nav__link">
-                {item}
-              </Link>
+              <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `desktop-nav__link ${isActive ? "desktop-nav__link--active" : ""}`} >{item}</NavLink>
             ))}
           </nav>
 
@@ -1919,9 +1897,7 @@ function ContactPage() {
             >
               <nav className="mobile-nav" aria-label="Mobilna navigacija">
                 {navigation.map((item) => (
-                  <Link key={item} to={navigationRoutes[item]} className="mobile-nav__link" onClick={() => setIsMobileMenuOpen(false)}>
-                    {item}
-                  </Link>
+                  <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `mobile-nav__link ${isActive ? "mobile-nav__link--active" : ""}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</NavLink>
                 ))}
               </nav>
 
@@ -2321,9 +2297,7 @@ function LegalDocumentPage({
 
           <nav className="desktop-nav" aria-label="Glavna navigacija">
             {navigation.map((item) => (
-              <Link key={item} to={navigationRoutes[item]} className="desktop-nav__link">
-                {item}
-              </Link>
+              <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `desktop-nav__link ${isActive ? "desktop-nav__link--active" : ""}`} >{item}</NavLink>
             ))}
           </nav>
 
@@ -2355,9 +2329,7 @@ function LegalDocumentPage({
             >
               <nav className="mobile-nav" aria-label="Mobilna navigacija">
                 {navigation.map((item) => (
-                  <Link key={item} to={navigationRoutes[item]} className="mobile-nav__link" onClick={() => setIsMobileMenuOpen(false)}>
-                    {item}
-                  </Link>
+                  <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `mobile-nav__link ${isActive ? "mobile-nav__link--active" : ""}`} onClick={() => setIsMobileMenuOpen(false)}>{item}</NavLink>
                 ))}
               </nav>
 
@@ -2506,9 +2478,7 @@ function FinancialReportsPage() {
 
           <nav className="desktop-nav" aria-label="Glavna navigacija">
             {navigation.map((item) => (
-              <Link key={item} to={navigationRoutes[item]} className="desktop-nav__link">
-                {item}
-              </Link>
+              <NavLink key={item} to={navigationRoutes[item]} className={({ isActive }) => `desktop-nav__link ${isActive ? "desktop-nav__link--active" : ""}`} >{item}</NavLink>
             ))}
           </nav>
 

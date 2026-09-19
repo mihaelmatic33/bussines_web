@@ -134,11 +134,13 @@ select:focus-visible {
   transition: transform 0.2s ease;
 }
 
+.desktop-nav__link--active,
 .desktop-nav__link:hover,
 .desktop-nav__link:focus-visible {
   color: #7a1118;
 }
 
+.desktop-nav__link--active::after,
 .desktop-nav__link:hover::after,
 .desktop-nav__link:focus-visible::after {
   transform: scaleX(1);
@@ -237,6 +239,10 @@ select:focus-visible {
   color: #111111;
   text-decoration: none;
   border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.mobile-nav__link--active {
+  color: #7a1118;
 }
 
 .mobile-panel__actions {
